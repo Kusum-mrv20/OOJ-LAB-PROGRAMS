@@ -42,9 +42,13 @@ class Student {
 		for(int i=0;i<n;i++)
 		{
 			tc=tc+credits[i];
-			if(marks[i]>=40)
+			if(marks[i]>=50)
 			{
 			tcp=tcp+(((marks[i]/10)+1)*credits[i]);
+			}
+			else if(marks[i]>=40 && marks[i]<50)
+			{
+				tcp=tcp+(4*credits[i]);
 			}
 		}
 		return (double)tcp/tc;
